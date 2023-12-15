@@ -30,11 +30,13 @@ export const fetchCategoriesStart = withMatcher(() =>
 );
 
 // fetchCategoriesStart.type;
+// This will be CATA_ACTION_TYPES.FETCH_CATEGORIES_START
+// Because this reaches into the return type of the actionCreator and gets the type
 
-export type CategoryAction =
-  | FetchCategoriesStart
-  | FetchCategoriesSuccess
-  | FetchCategoriesFailed;
+// export type CategoryAction =
+//   | FetchCategoriesStart
+//   | FetchCategoriesSuccess
+//   | FetchCategoriesFailed;
 
 export const fetchCategoriesSuccess = withMatcher(
   (categoriesArray: Category[]): FetchCategoriesSuccess =>

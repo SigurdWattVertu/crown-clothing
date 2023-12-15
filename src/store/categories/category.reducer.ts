@@ -21,10 +21,12 @@ export const CATEGORIES_INITIAL_STATE: CategoriesState = {
 // In the Shop component an array of categoryArrays gets returned
 // Sets the state here
 
+// The actions that come into this reducer can be any action at all.
 export const categoriesReducer = (
   state = CATEGORIES_INITIAL_STATE,
   action = {} as AnyAction
 ) => {
+  // Instead of using a switch statement we are using a Matchable pattern
   if (fetchCategoriesStart.match(action)) {
     return { ...state, isLoading: true };
   }

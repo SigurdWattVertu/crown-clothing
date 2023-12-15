@@ -8,6 +8,10 @@ type Matchable<AC extends () => AnyAction> = AC & {
 
 // withMatcher(fetchCategoriesStart);
 
+// Here we have created a Generic Function which is overloaded and allows us to receive any kind of Action Creator
+// But be able to check the Type against it.
+
+// These are type overloading these functions...
 export function withMatcher<AC extends () => AnyAction & { type: string }>(
   actionCreator: AC
 ): Matchable<AC>;
@@ -15,6 +19,8 @@ export function withMatcher<AC extends () => AnyAction & { type: string }>(
 export function withMatcher<
   AC extends (...args: any[]) => AnyAction & { type: string }
 >(actionCreator: AC): Matchable<AC>;
+
+// Here we are trying to extract the type which comes out of this actionCreator param
 
 export function withMatcher(actionCreator: Function) {
   const type = actionCreator().type;

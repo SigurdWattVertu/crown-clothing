@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import CartItem from "../cart-item/cart-item.component";
 import { useSelector } from "react-redux";
-import { selectCartItems } from "../../store/cart/cart.selector";
+import { selectCartItems } from "../../store/cart/cart.selector.ts";
 
 import Button from "../button/button.componet";
 import "./cart-dropdown.styles.scss";

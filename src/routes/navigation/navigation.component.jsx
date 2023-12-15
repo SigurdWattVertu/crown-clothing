@@ -12,7 +12,7 @@ import {
 } from "./navigation.styles.jsx";
 import { useSelector } from "react-redux";
 import { selectCurrentUser } from "../../store/user/user.selector";
-import { selectIsCartOpen } from "../../store/cart/cart.selector";
+import { selectIsCartOpen } from "../../store/cart/cart.selector.ts";
 
 const Navigation = () => {
   const isCartOpen = useSelector(selectIsCartOpen);

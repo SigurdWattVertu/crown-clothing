@@ -5,7 +5,7 @@ import {
   removeItemFromCart,
   addItemToCart,
 } from "../../store/cart/cart.action";
-import { selectCartItems } from "../../store/cart/cart.selector";
+import { selectCartItems } from "../../store/cart/cart.selector.ts";
 
 const CheckoutItem = ({ cartItem }) => {
   const { name, imageUrl, price, quantity } = cartItem;
